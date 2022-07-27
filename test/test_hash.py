@@ -90,6 +90,7 @@ async def test_hash_uint256(hash_factory):
     hash = test_keccak_call.result.res
     
     output = '0x' + hash.high.to_bytes(16, 'big').hex() + hash.low.to_bytes(16, 'big').hex()
+    print(output)
 
     assert output == web3_computed_hash
 
